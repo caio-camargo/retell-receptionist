@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retell Receptionist — The AI receptionist that answers when you can't</title>
+  <meta name="description" content="Set up a natural-sounding AI receptionist in 5 minutes. Books appointments, answers questions, and routes calls 24/7. Built on Retell's enterprise voice platform." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            ink: '#0F0F10',
+            paper: '#FAFAF7',
+            brand: {
+              50:  '#FFF3EC',
+              100: '#FFE3D1',
+              500: '#FF6A2C',
+              600: '#F25411',
+              700: '#C9410B',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(15,15,16,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,15,16,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-paper/80 border-b border-ink/5">
+    <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold text-lg">
+        <span class="inline-flex w-8 h-8 rounded-lg bg-ink text-white items-center justify-center font-extrabold">R</span>
+        <span>Retell <span class="text-brand-600">Receptionist</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+        <a href="#features" class="hover:text-ink">Features</a>
+        <a href="#platform" class="hover:text-ink">Platform</a>
+        <a href="#faq" class="hover:text-ink">FAQ</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-ink">Sign in</a>
+        <a href="#cta" class="text-sm font-semibold bg-ink text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition">Get started</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative grid-bg">
+    <div class="max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+        Powered by Retell's enterprise voice platform
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] max-w-4xl mx-auto">
+        Stop losing customers <span class="text-brand-600">to voicemail.</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-ink/70 max-w-2xl mx-auto">
+        Set up your natural-sounding AI receptionist in 5 minutes. It answers every call, books appointments, and routes the ones that matter — 24/7, in 70+ languages.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#cta" class="inline-flex justify-center items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-brand-600 transition">
+          Get started — 5 min setup
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="#platform" class="inline-flex justify-center items-center bg-white border border-ink/10 px-6 py-3.5 rounded-lg font-semibold hover:border-ink/30 transition">
+          See how it works
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-ink/50">No credit card required · HIPAA · SOC 2 · 99.9% uptime</p>
+    </div>
+  </section>
+
+  <!-- INTRODUCING -->
+  <section class="border-t border-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Introducing Retell Receptionist</p>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+            Book every appointment with an AI receptionist that answers when you can't.
+          </h2>
+          <p class="mt-6 text-lg text-ink/70">
+            Your customers don't reschedule — they call your competitor. Retell Receptionist picks up on the first ring, sounds like a real person, and turns every missed call into booked revenue.
+          </p>
+          <div class="mt-8 grid grid-cols-3 gap-6 max-w-md">
+            <div>
+              <div class="text-3xl font-extrabold text-brand-600">5 min</div>
+              <div class="text-xs text-ink/60 mt-1">to go live</div>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-brand-600">24/7</div>
+              <div class="text-xs text-ink/60 mt-1">coverage</div>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-brand-600">70+</div>
+              <div class="text-xs text-ink/60 mt-1">languages</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-500 to-brand-700 p-1">
+            <div class="w-full h-full rounded-[22px] bg-white p-8 flex flex-col justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold">R</div>
+                <div>
+                  <div class="font-semibold text-sm">Retell Receptionist</div>
+                  <div class="text-xs text-ink/50">Active call · 0:14</div>
+                </div>
+                <div class="ml-auto flex items-center gap-1 text-xs text-emerald-600 font-medium">
+                  <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                  Live
+                </div>
+              </div>
+              <div class="space-y-3 my-6">
+                <div class="bg-ink/5 rounded-2xl rounded-tl-sm px-4 py-3 text-sm max-w-[80%]">Hi, I'd like to book a cleaning for next Tuesday afternoon.</div>
+                <div class="bg-brand-500 text-white rounded-2xl rounded-tr-sm px-4 py-3 text-sm max-w-[80%] ml-auto">Of course — I have 2:30 or 4:00 PM with Dr. Chen on Tuesday the 12th. Which works better?</div>
+                <div class="bg-ink/5 rounded-2xl rounded-tl-sm px-4 py-3 text-sm max-w-[80%]">2:30 is perfect.</div>
+              </div>
+              <div class="flex items-center justify-between text-xs text-ink/60 border-t border-ink/5 pt-4">
+                <span>✓ Synced to Google Calendar</span>
+                <span>✓ SMS confirmation sent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="border-t border-ink/5">
+    <div class="max-w-7xl mx-auto px-6 py-24">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Everything you need</p>
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">A receptionist that never clocks out.</h2>
+      </div>
+
+      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Live in 5 minutes</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Paste your website URL, get a phone number, and go live. Retell auto-builds your agent's knowledge base from your site.</p>
+        </div>
+        <!-- 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">24/7 coverage</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Nights, weekends, holidays, peak hours. Every caller reaches a helpful, on-brand assistant — never a voicemail.</p>
+        </div>
+        <!-- 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Books on your calendar</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Checks live availability, books appointments, and sends confirmations. Native integrations with Google, Outlook, and Calendly.</p>
+        </div>
+        <!-- 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Your team first, AI as backup</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Set business hours when calls go to staff. Retell catches the overflow — and the after-hours, the lunch break, and the snow days.</p>
+        </div>
+        <!-- 5 -->
+        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Human-like voices in 70+ languages</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Pick from thousands of natural voices. Switch language mid-call. Callers can't tell it's AI — and most don't care once it works.</p>
+        </div>
+        <!-- 6 -->
+        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Phone, chat, and booking page</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">All included, all connected to the same agent and the same knowledge. One brain across every channel your customers use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM (THE DIFFERENTIATOR) -->
+  <section id="platform" class="border-t border-ink/5 bg-ink text-paper">
+    <div class="max-w-7xl mx-auto px-6 py-24">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-brand-500 uppercase tracking-wider mb-3">What others can't show you</p>
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+          Built on the same platform Fortune 500s run their voice agents on.
+        </h2>
+        <p class="mt-6 text-lg text-paper/70">
+          Most AI receptionists are a black box. Retell Receptionist is the consumer-grade front end of <strong class="text-paper">Retell Agent Platform</strong> — the enterprise voice infrastructure powering millions of calls a month. When you outgrow "receptionist," you don't migrate. You scale.
+        </p>
+      </div>
+
+      <div class="mt-12 rounded-2xl overflow-hidden bg-white p-2 ring-1 ring-white/10">
+        <img src="assets/architecture.jpg" alt="Retell Agent Platform architecture: No-Code Studio, Voice Orchestration, and Integrations" class="w-full h-auto rounded-xl" />
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="text-brand-500 font-bold text-sm uppercase tracking-wider mb-2">Swap any provider</div>
+          <p class="text-paper/70 text-sm leading-relaxed">GPT, Claude, Gemini for the brain. ElevenLabs, Cartesia, Retell Voices for the voice. Twilio, Telnyx, custom SIP for telephony. No lock-in, ever.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="text-brand-500 font-bold text-sm uppercase tracking-wider mb-2">Sub-second latency</div>
+          <p class="text-paper/70 text-sm leading-relaxed">Proprietary turn-taking, interruption handling, and model fallback engineered for real conversation — not chatbot-on-the-phone.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="text-brand-500 font-bold text-sm uppercase tracking-wider mb-2">Enterprise from day one</div>
+          <p class="text-paper/70 text-sm leading-relaxed">HIPAA, SOC 2, SSO/RBAC, AWS infrastructure, ZDR available. The compliance posture your IT team will actually approve.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-paper/50 text-sm">
+        <span class="font-semibold text-paper/70">Integrates with:</span>
+        <span>HubSpot</span><span>Salesforce</span><span>Zendesk</span><span>Five9</span><span>Genesys</span><span>Epic</span><span>athenahealth</span><span>Twilio</span><span>Make</span><span>n8n</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="border-t border-ink/5 bg-white">
+    <div class="max-w-4xl mx-auto px-6 py-24">
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center mb-16">Frequently asked questions</h2>
+      <div class="space-y-3">
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            How long does setup actually take?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Five minutes for the basics: paste your URL, pick a voice, get a number. Most customers spend another 10–15 minutes refining tone and adding calendar access before going live.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            Will my customers know it's AI?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Most don't. Retell's voices, turn-taking, and interruption handling are the same tech enterprise contact centers use. You can also have the agent disclose it's AI — your call.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            What happens when the AI can't handle a call?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">It transfers — warm or cold — to whichever staff member you've configured. You'll also get a transcript and summary in your inbox or CRM.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            Is it HIPAA compliant?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Yes. Retell is HIPAA-eligible and SOC 2 Type II certified, with BAAs available on the Business plan and above. Zero Data Retention is available for regulated workloads.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            Can it use my existing phone number?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Port your number, forward your line, or use a fresh Retell-provisioned number. Whatever's least disruptive to your operation.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            What does it cost?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Per-minute pricing with a free trial. No per-seat fees, no setup fees. See the pricing page for current rates.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            What if I need something more custom?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Drop into the full Retell Agent Platform — same account, same number, same voice. Build custom flows, plug in your own LLM, integrate any system. No migration.</p>
+        </details>
+        <details class="group bg-paper rounded-xl border border-ink/5 px-6 py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+            How is this different from ElevenAgents Reception or other AI receptionists?
+            <span class="text-brand-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Two things: the platform underneath, and the absence of lock-in. Retell Receptionist is built on infrastructure that already runs enterprise call centers — and you can swap the LLM, voice, or telephony provider any time without rebuilding.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="border-t border-ink/5">
+    <div class="max-w-5xl mx-auto px-6 py-24 text-center">
+      <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight">Get started today.</h2>
+      <p class="mt-6 text-lg text-ink/70 max-w-xl mx-auto">Set up your AI receptionist in minutes. Cancel anytime. Your missed calls are someone else's customers.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#" class="inline-flex justify-center items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-brand-600 transition">
+          Get started free
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="#" class="inline-flex justify-center items-center bg-white border border-ink/10 px-6 py-3.5 rounded-lg font-semibold hover:border-ink/30 transition">Talk to sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink/60">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex w-6 h-6 rounded-md bg-ink text-white items-center justify-center text-xs font-extrabold">R</span>
+        <span>© 2026 Retell AI. All rights reserved.</span>
+      </div>
+      <div class="flex gap-6">
+        <a href="https://retellai.com" class="hover:text-ink">Retell AI</a>
+        <a href="#" class="hover:text-ink">Help Center</a>
+        <a href="#" class="hover:text-ink">Terms</a>
+        <a href="#" class="hover:text-ink">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
