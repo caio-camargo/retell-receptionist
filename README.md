@@ -27,4 +27,4 @@ GitHub Pages enabled on `main` → live at the Pages URL.
 ## Notes
 - All CTAs link to `#` placeholders — wire to real signup once approved.
 - Architecture diagram is `assets/architecture.jpg` (provided by Bing).
-- Brand color `#FF6A2C` is a placeholder — swap for official Retell orange if/when needed.
+- Brand colors pulled from retellai.com CSS: `#3e6aef` (primary blue), `#00122e` (deep navy). Font is Inter (free stand-in for retellai.com's licensed Untitled Sans).
