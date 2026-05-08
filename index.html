@@ -7,22 +7,33 @@
   <meta name="description" content="Stand up an AI receptionist in five minutes. Books appointments, answers calls, routes the ones your team needs to take — 24/7, in 55+ languages. Free to start with $10 in credit." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+          },
           colors: {
-            ink: '#00122e',
-            paper: '#ffffff',
+            ink: '#0A0E1A',
+            paper: '#FAF7F2',
+            cream: '#F4EFE6',
             brand: {
               50:  '#eef2ff',
               100: '#dbe3ff',
               500: '#3e6aef',
               600: '#2f56d8',
               700: '#0e3aeb',
+            },
+            warm: {
+              100: '#FFE9D6',
+              300: '#FFC79A',
+              500: '#F4A672',
+              600: '#E08850',
             },
           },
         },
@@ -32,11 +43,15 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .grid-bg {
-      background-image:
-        linear-gradient(to right, rgba(15,15,16,0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(15,15,16,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
+    h1, h2, h3, .font-display { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-feature-settings: "ss01"; }
+    .accent-italic { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; }
+    .grain {
+      background-image: radial-gradient(circle at 1px 1px, rgba(10,14,26,0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .blob {
+      position: absolute; pointer-events: none; border-radius: 9999px;
+      filter: blur(60px); opacity: .55;
     }
   </style>
 </head>
@@ -56,41 +71,44 @@
       </div>
       <div class="flex items-center gap-3">
         <a href="#" class="hidden sm:inline text-sm font-medium text-ink/70 hover:text-ink">Sign in</a>
-        <a href="#cta" class="text-sm font-semibold bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition">Get started</a>
+        <a href="#cta" class="text-sm font-semibold bg-brand-600 text-white px-5 py-2.5 rounded-full hover:bg-brand-700 transition">Get started</a>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="relative grid-bg">
-    <div class="max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold mb-6">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 grain opacity-60 pointer-events-none"></div>
+    <div class="blob bg-warm-300" style="top:-120px;left:-120px;width:420px;height:420px;"></div>
+    <div class="blob bg-brand-100" style="top:40px;right:-160px;width:480px;height:480px;"></div>
+    <div class="relative max-w-6xl mx-auto px-6 pt-24 pb-28 md:pt-32 md:pb-36 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-ink/10 shadow-sm text-ink/70 text-xs font-medium mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-warm-500"></span>
         Powered by Retell's enterprise voice platform
       </div>
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] max-w-4xl mx-auto">
-        Never miss a <span class="text-brand-600">booking</span> again.
+      <h1 class="font-display text-6xl md:text-8xl font-semibold tracking-tight leading-[0.95] max-w-5xl mx-auto">
+        Never miss a <span class="accent-italic text-brand-600">booking</span> again.
       </h1>
-      <p class="mt-6 text-lg md:text-xl text-ink/70 max-w-2xl mx-auto">
-        Stand up an AI receptionist in five minutes. Free to start with $10 in credit, no annual contract, no sales demo. Answers every call, books on your calendar, and routes the ones your team needs to take — 24/7, in 55+ languages.
+      <p class="mt-8 text-lg md:text-2xl text-ink/65 max-w-2xl mx-auto leading-relaxed">
+        Stand up an AI receptionist in five minutes. Free to start with $10 in credit — no annual contract, no sales demo. Answers every call, books on your calendar, routes the ones your team needs to take. 24/7, in 55+ languages.
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#cta" class="inline-flex justify-center items-center gap-2 bg-brand-600 text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-brand-700 transition">
+        <a href="#cta" class="inline-flex justify-center items-center gap-2 bg-brand-600 text-white px-7 py-4 rounded-full font-semibold hover:bg-brand-700 transition">
           Start free — $10 credit
           <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
-        <a href="#platform" class="inline-flex justify-center items-center bg-white border border-ink/10 px-6 py-3.5 rounded-lg font-semibold hover:border-ink/30 transition">
+        <a href="#platform" class="inline-flex justify-center items-center bg-white border border-ink/10 px-7 py-4 rounded-full font-semibold hover:border-ink/30 transition">
           See how it works
         </a>
       </div>
-      <p class="mt-4 text-xs text-ink/50">$10 free credit · No annual contract · No sales demo · HIPAA · SOC 2</p>
+      <p class="mt-6 text-sm text-ink/55 tracking-wide">$10 free credit · No card required · Cancel anytime · HIPAA & SOC 2</p>
     </div>
   </section>
 
   <!-- VERTICALS -->
-  <section class="border-t border-ink/5 bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-      <p class="text-center text-xs font-semibold text-ink/40 uppercase tracking-widest mb-8">Built for businesses where the phone is the front door</p>
+  <section class="bg-paper">
+    <div class="max-w-6xl mx-auto px-6 py-16 border-t border-b border-ink/10">
+      <p class="text-center text-xs font-medium text-ink/55 tracking-[0.2em] uppercase mb-10">Built for businesses where the phone is the front door</p>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         <div class="flex flex-col items-center gap-2 px-4 py-5 rounded-xl border border-ink/5 hover:border-brand-500/30 transition">
           <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
@@ -121,55 +139,65 @@
   </section>
 
   <!-- INTRODUCING -->
-  <section class="border-t border-ink/5 bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Retell Receptionist</p>
-          <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-            An AI receptionist that picks up the calls your team can't get to.
+  <section class="bg-cream">
+    <div class="max-w-6xl mx-auto px-6 py-28">
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5">
+          <p class="text-xs font-medium text-ink/50 uppercase tracking-[0.2em] mb-5">Retell Receptionist</p>
+          <h2 class="font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+            An AI receptionist for the calls your team <span class="accent-italic text-warm-600">can't get to</span>.
           </h2>
-          <p class="mt-6 text-lg text-ink/70">
-            Your customers don't reschedule — they call your competitor. Retell Receptionist picks up on the first ring, sounds like a real person, and turns every missed call into booked revenue.
+          <p class="mt-7 text-lg text-ink/65 leading-relaxed">
+            Your customers don't reschedule — they call your competitor. Retell picks up on the first ring, sounds like a real person, and turns every missed call into booked revenue.
           </p>
-          <div class="mt-8 grid grid-cols-3 gap-6 max-w-md">
+          <div class="mt-10 flex gap-10">
             <div>
-              <div class="text-3xl font-extrabold text-brand-600">5 min</div>
-              <div class="text-xs text-ink/60 mt-1">to go live</div>
+              <div class="font-display text-5xl font-semibold text-ink leading-none">5<span class="text-warm-500">.</span></div>
+              <div class="text-[11px] text-ink/55 mt-2 uppercase tracking-wider">minutes live</div>
             </div>
             <div>
-              <div class="text-3xl font-extrabold text-brand-600">$10</div>
-              <div class="text-xs text-ink/60 mt-1">free to start</div>
+              <div class="font-display text-5xl font-semibold text-ink leading-none">$10<span class="text-warm-500">.</span></div>
+              <div class="text-[11px] text-ink/55 mt-2 uppercase tracking-wider">free to start</div>
             </div>
             <div>
-              <div class="text-3xl font-extrabold text-brand-600">55+</div>
-              <div class="text-xs text-ink/60 mt-1">languages</div>
+              <div class="font-display text-5xl font-semibold text-ink leading-none">55+<span class="text-warm-500">.</span></div>
+              <div class="text-[11px] text-ink/55 mt-2 uppercase tracking-wider">languages</div>
             </div>
           </div>
         </div>
-        <div class="relative">
-          <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-500 to-brand-700 p-1">
-            <div class="w-full h-full rounded-[22px] bg-white p-8 flex flex-col justify-between">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold">R</div>
-                <div>
-                  <div class="font-semibold text-sm">Retell Receptionist</div>
-                  <div class="text-xs text-ink/50">Active call · 0:14</div>
-                </div>
-                <div class="ml-auto flex items-center gap-1 text-xs text-emerald-600 font-medium">
-                  <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                  Live
-                </div>
+        <div class="md:col-span-7 relative">
+          <div class="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-warm-300 blur-2xl opacity-60"></div>
+          <div class="absolute -bottom-8 -right-4 w-40 h-40 rounded-full bg-brand-100 blur-2xl opacity-70"></div>
+          <div class="relative bg-white rounded-[36px] p-8 md:p-10 shadow-[0_30px_80px_-30px_rgba(10,14,26,0.25)] -rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div class="flex items-center gap-3 pb-6 border-b border-ink/5">
+              <div class="w-11 h-11 rounded-2xl bg-ink text-paper flex items-center justify-center font-display font-semibold text-lg">R</div>
+              <div>
+                <div class="font-semibold text-sm">Retell Receptionist</div>
+                <div class="text-xs text-ink/50">Active call · 0:14</div>
               </div>
-              <div class="space-y-3 my-6">
-                <div class="bg-ink/5 rounded-2xl rounded-tl-sm px-4 py-3 text-sm max-w-[80%]">Hi, I'd like to book a cleaning for next Tuesday afternoon.</div>
-                <div class="bg-brand-500 text-white rounded-2xl rounded-tr-sm px-4 py-3 text-sm max-w-[80%] ml-auto">Of course — I have 2:30 or 4:00 PM with Dr. Chen on Tuesday the 12th. Which works better?</div>
-                <div class="bg-ink/5 rounded-2xl rounded-tl-sm px-4 py-3 text-sm max-w-[80%]">2:30 is perfect.</div>
+              <div class="ml-auto flex items-center gap-1.5 text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                Live
               </div>
-              <div class="flex items-center justify-between text-xs text-ink/60 border-t border-ink/5 pt-4">
-                <span>✓ Synced to Google Calendar</span>
-                <span>✓ SMS confirmation sent</span>
-              </div>
+            </div>
+            <div class="space-y-3 my-7">
+              <div class="bg-cream rounded-[22px] rounded-tl-md px-5 py-3.5 text-[15px] max-w-[85%] leading-relaxed">Hi, I'd like to book a cleaning for next Tuesday afternoon.</div>
+              <div class="bg-ink text-paper rounded-[22px] rounded-tr-md px-5 py-3.5 text-[15px] max-w-[85%] ml-auto leading-relaxed">Of course — I have 2:30 or 4:00 with Dr. Chen on Tuesday the 12th. Which works for you?</div>
+              <div class="bg-cream rounded-[22px] rounded-tl-md px-5 py-3.5 text-[15px] max-w-[85%] leading-relaxed">2:30 is perfect.</div>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-5 border-t border-ink/5">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-ink/70 bg-warm-100 px-3 py-1.5 rounded-full">
+                <svg class="w-3 h-3 text-warm-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Booked on Cal.com
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-ink/70 bg-brand-50 px-3 py-1.5 rounded-full">
+                <svg class="w-3 h-3 text-brand-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                SMS sent
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-ink/70 bg-ink/5 px-3 py-1.5 rounded-full">
+                <svg class="w-3 h-3 text-ink/60" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                CRM updated
+              </span>
             </div>
           </div>
         </div>
@@ -178,16 +206,16 @@
   </section>
 
   <!-- FEATURES -->
-  <section id="features" class="border-t border-ink/5">
-    <div class="max-w-7xl mx-auto px-6 py-24">
-      <div class="max-w-2xl">
-        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Everything you need</p>
-        <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">A receptionist that never clocks out.</h2>
+  <section id="features" class="bg-paper">
+    <div class="max-w-6xl mx-auto px-6 py-28">
+      <div class="max-w-2xl mb-4">
+        <p class="text-xs font-medium text-ink/50 uppercase tracking-[0.2em] mb-5">Everything you need</p>
+        <h2 class="font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">A receptionist that <span class="accent-italic text-warm-600">never clocks out</span>.</h2>
       </div>
 
-      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         <!-- 1 -->
-        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+        <div class="bg-white rounded-[28px] p-8 border border-ink/5 hover:border-brand-500/30 transition">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
@@ -195,7 +223,7 @@
           <p class="text-ink/70 text-sm leading-relaxed">Paste your URL, pick a voice, get a number. No sales call, no $50K setup fee, no procurement form. Free to start — $10 in credit, no card required.</p>
         </div>
         <!-- 2 -->
-        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+        <div class="bg-white rounded-[28px] p-8 border border-ink/5 hover:border-brand-500/30 transition">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
@@ -203,7 +231,7 @@
           <p class="text-ink/70 text-sm leading-relaxed">Lunch breaks, snow days, peak hours, 3 a.m. Every caller hears a real conversation, not a voicemail beep — and you keep the appointments your competitors lose.</p>
         </div>
         <!-- 3 -->
-        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+        <div class="bg-white rounded-[28px] p-8 border border-ink/5 hover:border-brand-500/30 transition">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           </div>
@@ -211,7 +239,7 @@
           <p class="text-ink/70 text-sm leading-relaxed">Native Cal.com booking — checks availability, holds the slot, sends the SMS confirmation. Sync to Google Calendar, Outlook, or anything else through Make, Zapier, or n8n.</p>
         </div>
         <!-- 4 -->
-        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition relative">
+        <div class="bg-white rounded-[28px] p-8 border border-ink/5 hover:border-brand-500/30 transition relative">
           <span class="absolute top-5 right-5 text-[10px] font-bold tracking-wider text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full uppercase">Retell only</span>
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h2v2H3V5zm4 0h2v2H7V5zm4 0h2v2h-2V5zm4 0h2v2h-2V5zM3 9h2v2H3V9zm4 0h2v2H7V9zm4 0h2v2h-2V9zm4 0h2v2h-2V9zM3 13h2v2H3v-2zm4 0h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg>
@@ -220,7 +248,7 @@
           <p class="text-ink/70 text-sm leading-relaxed">Insurance ID, account number, appointment code. Callers can press numbers or just talk — one agent handles both. Most platforms in this category can't do it.</p>
         </div>
         <!-- 5 -->
-        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+        <div class="bg-white rounded-[28px] p-8 border border-ink/5 hover:border-brand-500/30 transition">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" transform="rotate(0)"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h6m4 0h6M4 12h2m4 0h10M4 18h6m4 0h6"/></svg>
           </div>
@@ -228,7 +256,7 @@
           <p class="text-ink/70 text-sm leading-relaxed">HubSpot, Salesforce, Zendesk, Twilio, Make, n8n, custom webhooks. Plug into the stack you already run instead of replacing it. Every call lands where you already look.</p>
         </div>
         <!-- 6 (multilingual) -->
-        <div class="bg-white rounded-2xl p-8 border border-ink/5 hover:border-brand-500/30 transition">
+        <div class="bg-white rounded-[28px] p-8 border border-ink/5 hover:border-brand-500/30 transition">
           <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
           </div>
@@ -252,27 +280,27 @@
         </p>
       </div>
 
-      <div class="mt-12 rounded-2xl overflow-hidden bg-white/95 p-3 ring-1 ring-white/10 shadow-2xl shadow-brand-500/10">
+      <div class="mt-12 rounded-[28px] overflow-hidden bg-white/95 p-3 ring-1 ring-white/10 shadow-2xl shadow-brand-500/10">
         <img src="assets/architecture.jpg" alt="Retell Agent Platform architecture: three columns showing No-Code Studio (build/test/deploy/monitor), Voice Orchestration (turn-taking, interruption handling, swap-any-provider for TTS/LLM/STT/Telephony), and Integrations (CRM, CCaaS, Healthcare, Telephony)" class="w-full h-auto rounded-xl" />
         <p class="text-xs text-ink/50 mt-3 px-1 italic">Diagram colors indicate platform layers, not brand palette.</p>
       </div>
 
       <div class="mt-12 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-white/10 p-6">
+        <div class="rounded-[28px] border border-white/10 p-6">
           <div class="text-brand-500 font-bold text-sm uppercase tracking-wider mb-2">Swap any provider</div>
           <p class="text-paper/70 text-sm leading-relaxed">GPT, Claude, Gemini for the brain. ElevenLabs, Cartesia, Retell Voices for the voice. Twilio, Telnyx, custom SIP for telephony. New models added the week they ship — no lock-in, ever.</p>
         </div>
-        <div class="rounded-2xl border border-white/10 p-6">
+        <div class="rounded-[28px] border border-white/10 p-6">
           <div class="text-brand-500 font-bold text-sm uppercase tracking-wider mb-2">Sub-second latency</div>
           <p class="text-paper/70 text-sm leading-relaxed">Proprietary turn-taking, interruption handling, and model fallback engineered for real conversation — not chatbot-on-the-phone. Plus DTMF + key press built in (rare in this category).</p>
         </div>
-        <div class="rounded-2xl border border-white/10 p-6">
+        <div class="rounded-[28px] border border-white/10 p-6">
           <div class="text-brand-500 font-bold text-sm uppercase tracking-wider mb-2">Enterprise from day one</div>
           <p class="text-paper/70 text-sm leading-relaxed">HIPAA, SOC 2, AWS infrastructure. Role-based access on every plan; custom roles and SSO on Enterprise. Overnight support. The compliance and ops posture your IT team will actually approve.</p>
         </div>
       </div>
 
-      <div class="mt-10 rounded-2xl bg-gradient-to-br from-brand-600/20 to-transparent border border-brand-500/30 p-8 md:p-10">
+      <div class="mt-10 rounded-[28px] bg-gradient-to-br from-brand-600/20 to-transparent border border-brand-500/30 p-8 md:p-10">
         <p class="text-xl md:text-2xl font-medium leading-snug text-paper">
           "Retell was the easiest to build in."
         </p>
@@ -379,11 +407,11 @@
       <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight">Start free.</h2>
       <p class="mt-6 text-lg text-ink/70 max-w-xl mx-auto">$10 in credit, no card required. Cancel anytime. The calls you're losing right now are someone else's customers tomorrow.</p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#" class="inline-flex justify-center items-center gap-2 bg-brand-600 text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-brand-700 transition">
+        <a href="#" class="inline-flex justify-center items-center gap-2 bg-brand-600 text-white px-7 py-4 rounded-full font-semibold hover:bg-brand-700 transition">
           Start free
           <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
-        <a href="#" class="inline-flex justify-center items-center bg-white border border-ink/10 px-6 py-3.5 rounded-lg font-semibold hover:border-ink/30 transition">Watch a 90-sec demo</a>
+        <a href="#" class="inline-flex justify-center items-center bg-white border border-ink/10 px-7 py-4 rounded-full font-semibold hover:border-ink/30 transition">Watch a 90-sec demo</a>
       </div>
     </div>
   </section>
